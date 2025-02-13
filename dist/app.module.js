@@ -1,16 +1,16 @@
-import * as angular from "angular";
-angular.module("Ecommerce", ['ngRoute', "authModule"])
+
+angular.module("eCommerce", ['ngRoute', "authModule", "catlogModule"])
     .config(function ($routeProvider) {
     $routeProvider
         .when("/login", {
         templateUrl: "src/views/login.html",
         controller: "AuthController"
     })
-        .when("/product", {
-        templateUrl: "src/views/product.html",
-        controller: "ProductController"
+        .when("/catlog", {
+        templateUrl: "src/views/catlog.html",
+        controller: "CatlogController"
     })
         .otherwise({
-        redirectTo: "/login"
+        redirectTo: "/catlog"
     });
 });
