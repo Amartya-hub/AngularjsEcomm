@@ -1,0 +1,32 @@
+<body ng-controller="CartController as cartCtrl">
+
+    <!-- Cart Header -->
+    <div class="cart-header">
+        Shopping Cart
+    </div>
+
+    <!-- Cart Items -->
+    <div class="cart-container">
+        <div ng-repeat="item in cartCtrl.cartItems" class="cart-item">
+            <div>
+                <p><strong>{{ item.name }}</strong></p>
+                <p>Price: {{ item.price | currency:'INR ' : 2 }}</p>
+            </div>
+            
+            <div class="cart-item-quantity">
+                <button class="btn btn-success" ng-click="cartCtrl.updateQuantity(item, item.quantity - 1)">-</button>
+                <p>Quantity: {{ item.quantity }}</p>
+                <button class="btn btn-success" ng-click="cartCtrl.updateQuantity(item, item.quantity + 1)">+</button>
+            </div>
+
+            <div>
+                <button class="btn btn-danger" ng-click="cartCtrl.removeFromCart(item)">Remove</button>
+            </div>
+        </div>
+
+        <!-- Total Price -->
+        <div class="total-section">
+            <strong>Total: {{ cartCtrl.totalPrice() | currency:'INR ' : 2 }}</strong>
+        </div>
+
+    </div>

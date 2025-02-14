@@ -55,6 +55,26 @@ export class CatlogService {
         description: "Apple Brands",
         quantityAvl: 10,
         price: 1000000
+    },{
+        id: 7,
+        name: "LapTops",
+        description: "ASUS Brands",
+        quantityAvl: 19,
+        price: 100000
+    },
+    {
+        id: 8,
+        name: "Laptops",
+        description: "YAML Brands",
+        quantityAvl: 120,
+        price: 10000
+    },
+    {
+        id: 9,
+        name: "Laptops",
+        description: "HMI Brands",
+        quantityAvl: 10,
+        price: 1000000
     },
   ];
   catlogsInCart: CatlogInCart[] = [];

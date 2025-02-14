@@ -11,6 +11,10 @@ angular.module("eCommerce", ['ngRoute', "authModule", "catlogModule"])
             templateUrl: "src/views/catlog.html",
             controller: "CatlogController"
         })
+        .when("/cart", {
+            templateUrl: "src/views/cart.html",
+            controller: "CartController"
+        })
         .otherwise({
             redirectTo: "/catlog"
         });
